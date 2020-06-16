@@ -1,0 +1,28 @@
+body{
+    background-color: LightGray;
+  }
+  
+  .horizontalmenu {
+    overflow: hidden;
+    background-color: rgb(50, 50, 50);
+    border-radius: 25px;
+  }
+  
+  .horizontalmenu a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .horizontalmenu a:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  .horizontalmenu a.active {
+    background-color: black;
+    color: white;
+  }

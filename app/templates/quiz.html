@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+        <p>You get {{ length }} Quizs</p>
+        Select one to start:
+        {% for q in data %}
+        <p><a href="/doQuiz/{{ q.id }}">{{ q }}</a></p>
+        {% endfor %}
+
+
+{% endblock %}

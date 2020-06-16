@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+{% for qa in data_webpage %}
+    QuizID: #{{ qa[0] }}<br>
+    {% for i in range(qa[5]) %}<br>
+        Question: {{ qa[1][i] }}<br>
+        UserAnswer: {{ qa[2][i] }}<br>
+        FeedBack: {{ qa[3][i] }}<br>
+        Score: {{ qa[4][i] }}<br>
+    {% endfor %}
+    <hr><hr>
+{% endfor %}
+{% endblock %}

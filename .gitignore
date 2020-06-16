@@ -1,0 +1,9 @@
+.vscode/*
+venv/*
+app/commands.py
+app.db
+app/__pycache__/*
+__pycache__/*
+.flaskenv
+migrations/*
+db

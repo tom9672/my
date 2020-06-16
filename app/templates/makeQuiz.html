@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <form action="" method="post">
+    <table bgcolor="pink" border="1px">
+
+        <tr>
+            <td>Question</td>
+            <td>Answer</td>
+            <td>Option</td>
+        </tr>
+        {% for q in data %}
+        <tr>
+
+            <td>{{q.question}}</td>
+            <td>{{q.answer}}</td>
+            <td>
+                <input type="checkbox" name="quiz" value="{{ q.id }}">
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+        <p><input type="submit"></p>
+    </form>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+{% for qa in QandA_list %}
+    <form action="" method="post">
+    <input type="hidden" name="id" value="{{ qa[1] }}">
+    UserID: #{{ qa[0] }}<br>
+    QuizID: #{{ qa[1] }}<br>
+        {% for i in range(qa[5]) %}<br>
+            Question: {{ qa[2][i] }}<br>
+            UserAnswer: {{ qa[3][i] }}<br>
+            ReferAnswer: {{ qa[4][i] }}<br>
+            Feedback:<br><textarea name="feedback"></textarea><br>
+            Score:<input name="score" type="text"><br>
+        {% endfor%}
+        <input type="submit" onclick="return confirm('Are You Sure To Submit ?')"><hr><hr>
+    </form>
+{% endfor%}
+{% endblock %}
